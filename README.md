@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+<!-- PROJECT LOGO -->
 <div align="center">
    <a href="https://github.com/ItayPeleg/Project_InvoScrape">
      <img src="https://github.com/ItayPeleg/Project_InvoScrape/test/assets/img/InvoScrape.logo.jpeg" alt="Logo" width="800" height="200">
@@ -33,7 +35,7 @@ The system contributes to turning manual processes into automatic ones. Developi
 
 ## Usage
 
-How it works?
+### How it works?
 
 1. Register/Log-in and upload the files on which you want to process the data.
 2. The system processes the file data using OCR technology.
@@ -43,6 +45,7 @@ How it works?
 
 App running video:
 
+[![Demo Video](https://img.youtube.com/vi/cL0xjGV5xfE/0.jpg)](https://www.youtube.com/watch?v=cL0xjGV5xfE)
 
 
 <!-- CONTACT -->
