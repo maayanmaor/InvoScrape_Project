@@ -45,7 +45,7 @@ The system contributes to turning manual processes into automatic ones. Developi
 
 App running video:
 
-[![Demo Video](https://img.youtube.com/vi/cL0xjGV5xfE/0.jpg)](https://www.youtube.com/watch?v=cL0xjGV5xfE)
+[![App Running Video](https://user-images.githubusercontent.com/105148680/194262951-fce8271a-c3be-4726-badd-738f00f65ed9.mov)](https://user-images.githubusercontent.com/105148680/194262951-fce8271a-c3be-4726-badd-738f00f65ed9.mov)
 
 
 <!-- CONTACT -->
