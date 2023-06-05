@@ -1,6 +1,6 @@
 <div align="center">
    <a href="https://github.com/ItayPeleg/Project_InvoScrape">
-     <img src="https://github.com/ItayPeleg/Project_InvoScrape/test/assets/img/InvoScrape.logo.jpeg" width="800" height="200">
+     <img src="https://github.com/ItayPeleg/Project_InvoScrape/test/assets/img/InvoScrape.logo.jpeg" alt="Logo" width="800" height="200">
    </a>
 
 <h3 align="center">InvoScrape Project</h3>
@@ -17,7 +17,7 @@
    </ol>
 </details>
 
-
+<div align="left">
 ## About The Project
 
 InvoScrape is a system that deals with extracting data from structured and unstructured invoices using optical character recognition technology. 
@@ -53,6 +53,8 @@ Itay Peleg - Itaypeleg165@gmail.com
 [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ItayPeleg)
   
 Project Link: [https://github.com/ItayPeleg/Project_InvoScrape](https://github.com/ItayPeleg/Project_InvoScrape)
+
+</div>
 
 <!-- BACK TO TOP -->
 <a href="#invoScrape-project">Back to Top</a>
