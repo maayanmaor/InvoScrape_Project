@@ -34,6 +34,11 @@ db = mysql.connector.connect(
 )
 
 
+def check_db_connection():
+    if not db.is_connected():
+        db.reconnect()
+
+
 # Authentication function
 def authenticate(email_address, password, check_existence=False):
     cursor = db.cursor()
@@ -54,6 +59,8 @@ def authenticate(email_address, password, check_existence=False):
 @DLL.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        check_db_connection()
+
         session.pop('user_email', None)
 
         email_address = request.form['email']
@@ -87,6 +94,8 @@ def login():
 @DLL.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        check_db_connection()
+
         full_name = request.form['fullname']
         company_name = request.form['companyname']
         email_address = request.form['email']
@@ -129,6 +138,8 @@ def register():
 # Logging out function
 @DLL.route('/logout', methods=['POST'])
 def logout():
+    check_db_connection()
+
     # Remove session variables for user ID and username
     session.pop('user_email', None)
 
@@ -138,6 +149,8 @@ def logout():
 
 @DLL.route('/getInvoice', methods=['GET'])
 def get_invoice():
+    check_db_connection()
+
     # Get the file ID from the request query parameters
     file_id = request.args.get('file_id')
     DLL.logger.info('File ID: %s', file_id)
@@ -171,6 +184,8 @@ def get_invoice():
 
 @DLL.route('/getData', methods=['GET'])
 def get_files():
+    check_db_connection()
+
     file_name = request.args.get('file_name')
     start_date = request.args.get('start_date')
     end_date = request.args.get('end_date')
@@ -216,6 +231,8 @@ def get_files():
 
 @DLL.route('/add', methods=['POST'])
 def add():
+    check_db_connection()
+
     if request.method == 'POST':
         email = request.form['email']
         file_name = request.form['file_name']
@@ -247,6 +264,8 @@ def add():
 
 @DLL.route('/write_file_info', methods=['POST'])
 def write_file_info():
+    check_db_connection()
+
     print("Starting to write the file info into db...")
     # create a cursor
     cursor = db.cursor()
@@ -310,6 +329,8 @@ def write_file_info():
 
 @DLL.route('/contact', methods=['POST'])
 def contact():
+    check_db_connection()
+
     sender_email = 'invoscrape9@gmail.com'
     sender_password = 'c t i p h p i o e j t n z c i s'
 
