@@ -18,6 +18,7 @@
 </details>
 
 <div align="left">
+
 ## About The Project
 
 InvoScrape is a system that deals with extracting data from structured and unstructured invoices using optical character recognition technology. 
