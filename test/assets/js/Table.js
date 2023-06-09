@@ -117,35 +117,38 @@ for (var i = 0; i < data.length; i++) {
 	
 	
 function createViewButtonClickHandler(fileId) {
-    return function() {
-        var url = '/get_invoice.php?file_id=' + fileId;
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.responseType = 'blob';
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    var blobResponse = xhr.response;
-                    var contentType = xhr.getResponseHeader('Content-Type');
-                    if (contentType.startsWith('image/')) {
-                        var objectURL = URL.createObjectURL(blobResponse);
-                        openModal(objectURL, contentType);
-                    } else if (contentType === 'application/pdf') {
-                        var fileURL = URL.createObjectURL(blobResponse);
-                        window.open(fileURL);
-                    } else {
-                        console.log('Received response is not an image or PDF');
-                        alert('No invoice to display');
-                    }
-                } else {
-                    console.log('Error retrieving invoice');
-                    alert('Error retrieving invoice');
-                }
-            }
-        };
-        xhr.send();
+  return function() {
+    var encodedFileId = encodeURIComponent(fileId); // Update to use encodeURIComponent
+    var url = '/get_invoice.php?file_id=' + encodedFileId; // Update the URL
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          var blobResponse = xhr.response;
+          var contentType = xhr.getResponseHeader('Content-Type');
+          if (contentType.startsWith('image/')) {
+            var objectURL = URL.createObjectURL(blobResponse);
+            openModal(objectURL, contentType);
+          } else if (contentType === 'application/pdf') {
+            var fileURL = URL.createObjectURL(blobResponse);
+            window.open(fileURL);
+          } else {
+            console.log('Received response is not an image or PDF');
+            alert('No invoice to display');
+          }
+        } else {
+          console.log('Error retrieving invoice');
+          alert('Error retrieving invoice');
+        }
+      }
     };
+    xhr.send();
+  };
 };
+
+
 
 
 
