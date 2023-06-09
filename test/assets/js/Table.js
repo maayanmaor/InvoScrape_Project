@@ -43,7 +43,7 @@ var tbody = table.getElementsByTagName("tbody")[0];
 tbody.innerHTML = ""; // Clear previous table body
 
 // Populate table with response data
-for (var i = 0; i < data.length; i++) {
+for (var i = data.length - 1; i >= 0; i--) {
 	var rowData = data[i];
 	var row = document.createElement("tr");
 
@@ -147,12 +147,6 @@ function createViewButtonClickHandler(fileId) {
     xhr.send();
   };
 };
-
-
-
-
-
-
 
 
 function openModal(imageURL) {
