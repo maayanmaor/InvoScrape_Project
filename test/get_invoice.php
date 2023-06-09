@@ -1,5 +1,5 @@
 <?php
-$fileId = $_GET['file_id'];
+$fileId = urlencode($_GET['file_id']); // URL encode the file name
 $url = 'http://localhost:5000/getInvoice?file_id=' . $fileId;
 
 $ch = curl_init($url);
@@ -13,7 +13,9 @@ if ($httpCode >= 200 && $httpCode < 300) {
     header('Content-Type: ' . $contentType);
     echo $response;
 } else {
-    http_response_code($httpCode);
-    echo 'Error: Request failed with status code ' . $httpCode;
+    // Print the error response and logs
+    echo 'Error: Request failed with status code ' . $httpCode . '<br>';
+    echo 'Response from Flask: <br>';
+    echo nl2br($response);
 }
 ?>
