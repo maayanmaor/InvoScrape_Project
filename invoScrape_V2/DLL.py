@@ -158,9 +158,6 @@ def get_invoice():
     # Define the directory where the invoice files are located
     directory = r"C:\test\files"
 
-    # Replace spaces in the file name with underscores
-    file_id = file_id.replace(" ", "_")
-
     # Check if the file exists in the directory
     file_path = os.path.join(directory, file_id)
     DLL.logger.info('File path: %s', file_path)
