@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
    <a href="https://github.com/ItayPeleg/Project_InvoScrape">
-     <img src="test/assets/img/InvoScrape.logo.jpeg" alt="Logo" width="400" height="200">
+     <img src="Web/assets/img/InvoScrape.logo.jpeg" alt="Logo" width="400" height="200">
    </a>
 
 <h3 align="center">InvoScrape Project</h3>
