@@ -63,8 +63,7 @@ Maayan Maor - Maayanmaor28061996@gmail.com
   
 Project Link: [https://github.com/ItayPeleg/Project_InvoScrape](https://github.com/ItayPeleg/Project_InvoScrape)
 Project Link 2 : https://github.com/maayanmaor/InvoScrape_Project/blob/main/README.md
-Project Link 3 : [https://github.com/MaayanMaor/Project_InvoScrape](https://github.com/MaayanMaor/Project_InvoScrape)
-Project Link 4 : [https://github.com/maayanmaor/InvoScrape_Project]
+Project Link 2 : https://github.com/maayanmaor/InvoScrape_Project/blob/main
 
 </div>
 
